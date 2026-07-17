@@ -13,3 +13,5 @@ A simple, lightweight To-Do List app with a glowing green background, custom dea
 * HTML5
 * CSS3 (using CSS blur filters)
 * Vanilla JavaScript
+
+[🔗 Live Demo](https://smart-to-do-list-nu-dusky.vercel.app/)
