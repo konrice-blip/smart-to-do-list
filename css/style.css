@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+
+.glow-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #020202; /* Rich dark-black base */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Increased the size from 600px to 1000px so green dominates the background */
+.glow-source {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px; 
+  height: 1000px;
+  border-radius: 50%;
+  
+  background: radial-gradient(
+    circle, 
+    rgba(52, 211, 153, 1) 0%,      /* Intense mint-green core */
+    rgba(16, 185, 129, 0.95) 35%,  /* Strong emerald green */
+    rgba(4, 120, 87, 0.7) 60%,     /* Keeps forest green visible wide out */
+    rgba(2, 44, 34, 0.4) 80%,      /* Deep, translucent dark green transition */
+    rgba(0, 0, 0, 0) 100%          /* Fades out softly at the extreme edges */
+  );
+  
+  filter: blur(100px); /* Slightly increased blur for a smoother glow */
+  pointer-events: none; 
+}
+
+/* Centered the content so your App sits directly on top of the glow */
+.content {
+  position: relative;
+  z-index: 10;
+  color: #ffffff;
+  font-family: sans-serif;
+  width: 100%;
+  margin: auto;
+  max-width: 700px; /* Moves the container sizing here */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Removed 'margin: 100px auto 20px' so it sits perfectly centered */
+.todo-list {
+  background-color: white;
+  width: 100%;
+    max-width: 700px;
+margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.5); /* Deeper shadow for depth */
+}
+
+.todo-list h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: rgb(27, 202, 120);
+    color: white;
+    padding: 16px 50px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+button:hover {
+    background-color: rgb(14, 148, 85)
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 10px 45px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: #333333;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(/images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(/images/checked.png)
+}
+
+ul li span {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
