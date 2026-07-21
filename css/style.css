@@ -10,14 +10,13 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: #020202; /* Rich dark-black base */
+  background-color: #020202; 
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Increased the size from 600px to 1000px so green dominates the background */
 .glow-source {
   position: absolute;
   top: 50%;
@@ -29,18 +28,16 @@
   
   background: radial-gradient(
     circle, 
-    rgba(52, 211, 153, 1) 0%,      /* Intense mint-green core */
-    rgba(16, 185, 129, 0.95) 35%,  /* Strong emerald green */
-    rgba(4, 120, 87, 0.7) 60%,     /* Keeps forest green visible wide out */
-    rgba(2, 44, 34, 0.4) 80%,      /* Deep, translucent dark green transition */
-    rgba(0, 0, 0, 0) 100%          /* Fades out softly at the extreme edges */
+    rgba(52, 211, 153, 1) 0%,      
+    rgba(16, 185, 129, 0.95) 35%,  
+    rgba(4, 120, 87, 0.7) 60%,    
+    rgba(2, 44, 34, 0.4) 80%,      
+    rgba(0, 0, 0, 0) 100%         
   );
-  
-  filter: blur(100px); /* Slightly increased blur for a smoother glow */
+  filter: blur(100px); 
   pointer-events: none; 
 }
 
-/* Centered the content so your App sits directly on top of the glow */
 .content {
   position: relative;
   z-index: 10;
@@ -48,14 +45,13 @@
   font-family: sans-serif;
   width: 100%;
   margin: auto;
-  max-width: 700px; /* Moves the container sizing here */
+  max-width: 700px; 
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Removed 'margin: 100px auto 20px' so it sits perfectly centered */
 .todo-list {
   background-color: white;
   width: 100%;
@@ -63,7 +59,7 @@
 margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.5); /* Deeper shadow for depth */
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.5); 
 }
 
 .todo-list h2 {
