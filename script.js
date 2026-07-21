@@ -7,19 +7,19 @@ function addTask() {
   if (inputBox.value === '') {
     alert('You have to write something!')
   } else {
-      let li = document.createElement("li"); // create li element
-      li.innerHTML = inputBox.value;  // the text inside li element is the value you input in inputBox
-    listContainer.appendChild(li) //added at the last element in li
+      let li = document.createElement("li");
+      li.innerHTML = inputBox.value;  
+    listContainer.appendChild(li) 
       let span = document.createElement("span");
       span.innerHTML = "\u00d7";
       li.appendChild(span);
 
       if (deadline) {
         let note = document.createElement("p");
-        note.innerHTML = "Deadline: " + new Date(deadline).toLocaleString(); // Format the deadline
-        note.style.color = "red"; // Optional: Style the deadline
+        note.innerHTML = "Deadline: " + new Date(deadline).toLocaleString(); 
+        note.style.color = "red";
         note.style.fontSize = "0.8em";
-        li.appendChild(note); // Append the note to the li
+        li.appendChild(note); 
     }
   }
   inputBox.value = '';
