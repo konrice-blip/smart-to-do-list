@@ -1,6 +1,8 @@
 **Smart Task Manager**
 A simple, lightweight To-Do List app with a glowing green background, custom deadlines, and local storage support.
 
+👉 **[LIVE DEMO](https://smart-to-do-list-nu-dusky.vercel.app/)**
+
 ## Features
 
 * **CSS Glow Background:** A blurred green radial-gradient centered behind the UI.
@@ -13,5 +15,3 @@ A simple, lightweight To-Do List app with a glowing green background, custom dea
 * HTML5
 * CSS3 (using CSS blur filters)
 * Vanilla JavaScript
-
-[🔗 Live Demo](https://smart-to-do-list-nu-dusky.vercel.app/)
